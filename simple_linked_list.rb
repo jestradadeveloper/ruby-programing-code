@@ -63,7 +63,20 @@ class SimpleLinkedList
     end
     current_head
   end
-
+#size: return the quantity of elements of the linked list (size)
+  def elements
+    if empty?
+      count = 0
+    else
+      count = 1
+      current_node = @head
+      while current_node.next != nil
+        current_node = current_node.next
+        count += 1
+      end
+    end
+    count
+  end
 
 
 end
@@ -73,5 +86,6 @@ linked_list.push(2)
 linked_list.push(1)
 linked_list.unshift(20)
 linked_list.push(5)
+puts linked_list.elements
 
 puts linked_list.inspect
