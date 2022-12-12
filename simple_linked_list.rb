@@ -35,6 +35,25 @@ class SimpleLinkedList
       @head = curr_head
     end
   end
+
+  #pop: remove the node in the end of the list and return it
+  def pop(data)
+    if empty?
+      return "this list is currently Empty"
+    else
+      current_node = @head
+      while current_node.next.next != nil
+        current_node = current_node.next
+      end
+      last_node = current_node.next
+      current_node.next = nil
+    end
+    last_node
+  end
+
+
+
+
 end
 
 linked_list = SimpleLinkedList.new
