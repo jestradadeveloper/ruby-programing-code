@@ -3,8 +3,6 @@ class FindTargetPositions
     return [-1, -1] unless list.include?(target)
 
     hash = {}
-    pos = []
-    cont = 0
     (0..list.length - 1).each do |i|
       if hash[list[i].to_i]
         hash[list[i].to_i] << i

@@ -1,0 +1,20 @@
+{
+  "name": "algoritmos",
+  "version": "1.0.0",
+  "description": "Algoritmos en ruby y javascript",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jestradadeveloper/ruby-programing-code.git"
+  },
+  "author": "Jose Estrada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jestradadeveloper/ruby-programing-code/issues"
+  },
+  "homepage": "https://github.com/jestradadeveloper/ruby-programing-code#readme"
+}

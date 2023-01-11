@@ -1,33 +1,35 @@
 class MaxProfit
   def self.get_max_profit_brute_force(prices)
-    l = 0
-    max = 0
-    r = prices.length - 1
-    (0..prices.length - 1).each do |l|
-      (l + 1..prices.length - 1).each do |r|
-        res = prices[r] - prices[l]
-        max = [max, res].max
+    max_profits = [0]
+    (0..prices.length - 1).each do |i|
+      (i + 1..prices.length - 1).each do |j|
+        profit = prices[j] - prices[i]
+        max_profits << profit
       end
     end
-    max
+    max_profits.max
   end
 
   def self.get_max_profit(prices)
-    l = 0
+    buyed = 0
     max = 0
-    r = 1
+    selled = 1
     while r < prices.length - 1
-      if prices[l] < prices[r]
-        profit = prices[r] - prices[l]
+      if prices[buyed] < prices[selled]
+        profit = prices[buyed] - prices[selled]
         max = [max, profit].max
       else
-        l = r
+        buyed = selled
       end
-      r += 1
+      selled += 1
     end
     max
   end
+
+  def self.get_max_profit_2(_prices)
+    min
+  end
 end
 
-prices = [7, 6, 4, 3, 1]
-MaxProfit.get_max_profit(prices)
+prices = [10, 7, 5, 8, 11, 9]
+puts MaxProfit.get_max_profit(prices)

@@ -3,3 +3,4 @@
 ### 1) Get the max area of water from an heights array
 ### 2) Get the most frecuent element from an array
 ### 3) Get the first and the last index given an array and a target
+### 4) Get true or false if are duplicate numbers in the array
